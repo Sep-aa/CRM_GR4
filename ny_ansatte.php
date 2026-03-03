@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:35
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-03 10:52:13
+ * @Last Modified time: 2026-03-03 11:12:02
  */
 
 
@@ -41,7 +41,7 @@ include 'connect.php';
         <input type="text" name="etternavn" id="etternavn" required> <br><br>
 
         <label for="telefonnummer">Telefonnummer</label> <br>
-        <input type="text" name="telefonnummer" id="telefonnummer" required> <br><br>
+        <input type="number" name="telefonnummer" id="telefonnummer" required> <br><br>
 
         <label for="epost">E-post</label> <br>
         <input type="email" name="epost" id="epost" required> <br><br>
@@ -49,7 +49,7 @@ include 'connect.php';
         <label for="rolle">Rolle</label> <br>
         <input type="text" name="rolle" id="rolle" required> <br><br>
 
-        <input type="submit" name="ny_ansatte" id="ny_ansatte" value="Registrer">
+        <input type="submit" name="ny_ansatte" id="ny_ansatte" value="Registrer"> <!-- submiter til ny_bekreft_ansatte.php -->
 
         </form>
 

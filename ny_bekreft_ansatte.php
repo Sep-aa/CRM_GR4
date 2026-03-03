@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-03 10:50:40
+ * @Last Modified time: 2026-03-03 11:11:30
  */
 
 
@@ -32,11 +32,11 @@ if(isset($_GET['ny_ansatt']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) // Sjekk
     if (!$ansatt)
         {
 
-        $sql = "INSERT INTO ansatte (navn, etternavn, telefonnummer, epost, rolle)
-                VALUES (:navn, :etternavn, :telefonnummer, :epost, :rolle)"; // SQL-kode for å sette inn en ny ansatt i tabellen "ansatte" med verdiene som er skrevet inn i formen
+        $sql = "INSERT INTO ansatte (ansatt_id, navn, etternavn, telefonnummer, epost, rolle)
+                VALUES (:ansatt_id, :navn, :etternavn, :telefonnummer, :epost, :rolle)"; // SQL-kode for å sette inn en ny ansatt i tabellen "ansatte" med verdiene som er skrevet inn i formen
 
         $stmt = $pdo->prepare($sql); // Forbereder SQL-koden for kjøring
-        // $stmt->bindParam(":ansatt_id",$ansatt_id);
+        $stmt->bindParam(":ansatt_id",$ansatt_id);
         $stmt->bindParam(":navn",$navn);
         $stmt->bindParam(":etternavn",$etternavn);
         $stmt->bindParam(":telefonnummer",$telefonnummer);
