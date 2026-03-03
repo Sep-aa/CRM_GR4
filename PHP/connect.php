@@ -8,10 +8,10 @@ $database = "CRM_GR4";
 
 try
 {
-    $pdo = new PDO("mysql:host$dbname=$database" , $brukernavn, $passord);
+    $pdo = new PDO("mysql:host=$server;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo"database is connected";
+    echo "database is connected";
 }
 catch(PDOException $e)
 {
