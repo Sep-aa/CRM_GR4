@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:35
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-03 11:17:53
+ * @Last Modified time: 2026-03-06 13:18:41
  */
 
 
@@ -22,7 +22,7 @@ try
     $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     // echo "Oppkobling til databasen er OK!";
     }
-catch(PDOExeption $e)
+catch(PDOExeption $e) // Hvis det oppstår en feil i try-blokken, så vil koden hoppe til catch-blokken og kjøre den
     {
     die("Oppkonlingsfeil til MYSQL: ".$e->getMessage()."<br>");    
     }    
