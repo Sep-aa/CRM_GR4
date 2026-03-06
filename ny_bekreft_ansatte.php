@@ -3,16 +3,16 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-03 10:50:40
+ * @Last Modified time: 2026-03-06 13:05:27
  */
 
 
 //Henter oppkoblingen til databasen
 include 'connect.php';
 
-if(isset($_GET['ny_ansatt']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) // Sjekker om knappen "ny_ansatt" er trykket og at formen er sendt med GET-metoden
+if(isset($_GET['ny_ansatte']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) // Sjekker om knappen "ny_ansatt" er trykket og at formen er sendt med GET-metoden
     {
-    $ansatt_id = $_GET['ansatt_id'];
+    // $ansatt_id = $_GET['ansatt_id'];
     $navn = $_GET['navn'];
     $etternavn = $_GET['etternavn'];
     $telefonnummer = $_GET['telefonnummer'];
@@ -32,11 +32,11 @@ if(isset($_GET['ny_ansatt']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) // Sjekk
     if (!$ansatt)
         {
 
-        $sql = "INSERT INTO ansatte (navn, etternavn, telefonnummer, epost, rolle)
-                VALUES (:navn, :etternavn, :telefonnummer, :epost, :rolle)"; // SQL-kode for å sette inn en ny ansatt i tabellen "ansatte" med verdiene som er skrevet inn i formen
+        $sql = "INSERT INTO ansatte (ansatt_id, navn, etternavn, telefonnummer, epost, rolle)
+                VALUES (:ansatt_id, :navn, :etternavn, :telefonnummer, :epost, :rolle)"; // SQL-kode for å sette inn en ny ansatt i tabellen "ansatte" med verdiene som er skrevet inn i formen
 
         $stmt = $pdo->prepare($sql); // Forbereder SQL-koden for kjøring
-        // $stmt->bindParam(":ansatt_id",$ansatt_id);
+        $stmt->bindParam(":ansatt_id",$ansatt_id);
         $stmt->bindParam(":navn",$navn);
         $stmt->bindParam(":etternavn",$etternavn);
         $stmt->bindParam(":telefonnummer",$telefonnummer);

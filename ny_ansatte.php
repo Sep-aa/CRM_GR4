@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:35
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-03 10:52:13
+ * @Last Modified time: 2026-03-06 13:06:55
  */
 
 
@@ -30,9 +30,9 @@ include 'connect.php';
 
     <main>
         <form action="ny_bekreft_ansatte.php" method="get">
-
+<!-- 
         <label for="ansatt_id">Ansatt-ID</label> <br>
-        <input type="text" name="ansatt_id" id="ansatt_id" required> <br><br>
+        <input type="text" name="ansatt_id" id="ansatt_id" readonly> <br><br> -->
 
         <label for="navn">Navn</label> <br>
         <input type="text" name="navn" id="navn" required> <br><br>
@@ -41,15 +41,15 @@ include 'connect.php';
         <input type="text" name="etternavn" id="etternavn" required> <br><br>
 
         <label for="telefonnummer">Telefonnummer</label> <br>
-        <input type="text" name="telefonnummer" id="telefonnummer" required> <br><br>
+        <input type="number" name="telefonnummer" id="telefonnummer" required> <br><br>
 
-        <label for="epost">E-post</label> <br>
+        <label for="e-post">E-post</label> <br>
         <input type="email" name="epost" id="epost" required> <br><br>
 
         <label for="rolle">Rolle</label> <br>
         <input type="text" name="rolle" id="rolle" required> <br><br>
 
-        <input type="submit" name="ny_ansatte" id="ny_ansatte" value="Registrer">
+        <input type="submit" name="ny_ansatte" id="ny_ansatte" value="Registrer"> <!-- submiter til ny_bekreft_ansatte.php -->
 
         </form>
 
