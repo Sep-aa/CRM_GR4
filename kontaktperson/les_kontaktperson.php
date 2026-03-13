@@ -25,16 +25,15 @@ $kontaktperson = $stmt->fetchAll(PDO::FETCH_ASSOC); //Henter ut alle rader fra $
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
     <title>kontaktperson</title>
 </head>
 <body>
-    <?php include '../meny.php'; ?>
-
+    
     <header>
         <p>VIS ALLE kontaktperson</p>
     </header>    
-
+    
     <main>
         <table>
             <thead>
@@ -60,11 +59,12 @@ $kontaktperson = $stmt->fetchAll(PDO::FETCH_ASSOC); //Henter ut alle rader fra $
                         <td><a href="rediger_kontaktperson.php?kontakt_id=<?php echo htmlspecialchars($kontakt['kontakt_id']); ?> ">Rediger</a></td>
                         <td><a id="slett" href="slett_kontaktperson.php?kontakt_id=<?php echo htmlspecialchars($kontakt['kontakt_id']); ?> ">Slett</a></td>
                     </tr>
-                <?php } ?>
-
-
-            </tbody>
-        </table>
+                    <?php } ?>
+                    
+                    
+                </tbody>
+            </table>
+            <?php include '../meny.php'; ?>
 
     </main>
 </body>

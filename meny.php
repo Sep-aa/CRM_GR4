@@ -8,10 +8,12 @@
 
     echo '
     <nav>
-        <ul>
-            <li><a href="ny_ansatte.php">Ny</a></li>
-            <li><a href="les_ansatte.php">Les</a></li>
-        </ul>
+        <a href="ny_ansatte.php">Ny</a>
+        <a href="les_ansatte.php">Les</a>
     </nav>';
 
 ?>    
+
+
+<li><a href="ny_ansatte.php">Ny</a></li>
+<li><a href="les_ansatte.php">Les</a></li>
