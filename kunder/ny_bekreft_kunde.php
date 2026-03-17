@@ -3,14 +3,14 @@
  * @Author: Sep-aa
  * @Date:   2026-03-13 13:35:14
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:39:59
+ * @Last Modified time: 2026-03-17 09:06:56
  */
 
 // Inkluderer database-tilkoblingsfilen
-include "connect.php";
+include "../connect.php";
 
 // Sjekker om skjemaet er sendt og metoden er GET
-if(isset($_GET['kunder_new']) && ($_SERVER['REQUEST_METHOD'] == 'GET'))
+if(isset($_GET['ny_kunde']) && ($_SERVER['REQUEST_METHOD'] == 'GET'))
     {
         // Henter data fra GET-parametere
         $kunde_id = $_GET['kunde_id'];
@@ -22,7 +22,7 @@ if(isset($_GET['kunder_new']) && ($_SERVER['REQUEST_METHOD'] == 'GET'))
         $by = $_GET['by'];
 
         // Sjekker om kunden allerede finnes
-        $sql = "Select * From kunder where kunde_id = :kunde_id";
+        $sql = "SELECT * FROM kunder WHERE kunde_id = :kunde_id";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':kunde_id', $kunde_id);
         $stmt->execute();
@@ -36,7 +36,7 @@ if(isset($_GET['kunder_new']) && ($_SERVER['REQUEST_METHOD'] == 'GET'))
         if(!$kunde)
             {
             $sql = "INSERT INTO kunder (kunde_id, bedriftnavn, telefonnummer, epost, adresse, postnummer, by)
-            VALUES (:kunde_id, :bedriftnavn, :telefonnummer, :epost, :adresse, :postnummer, :by)";
+                    VALUES (:kunde_id, :bedriftnavn, :telefonnummer, :epost, :adresse, :postnummer, :by)";
 
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':kunde_id', $kunde_id);
@@ -66,30 +66,32 @@ if(isset($_GET['kunder_new']) && ($_SERVER['REQUEST_METHOD'] == 'GET'))
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
         <title>Bekreftelse</title>
+
     </head>
     <body>
         <!-- Inkluderer meny-filen -->
-        <?php include 'menu.php'?>
+        <?php include '../menu.php'?>
 
         <!-- Header-seksjon -->
         <header>
-           <p>Her kan du legge til nye kunder</p>
+           <p>REGISTRER NY KUNDE</p>
         </header>
 
         <!-- Hovedinnhold med bekreftelsesmelding -->
         <main>
             <?php
-            // Viser melding basert på om innsettingen lyktes
-            if($stmt)
+            if ($stmt)
                 {
-                    echo "Kunden er lagt til i databasen";
+                echo '<p> En ny kunde er blitt registrert </p>';    
                 }
             else
                 {
-                    echo "Kunden kunne ikke legges til i databasen";
-                }
-            ?>
+                echo '<p id="slett"> Det oppsto en feil! kunde ble ikke registrert </p>';
+                }        
+
+        ?>
         </main>
 
     </body>
