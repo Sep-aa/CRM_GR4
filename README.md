@@ -16,7 +16,7 @@ Her må det komme frem hvilke funksjonelle krav systemet skal ha. Funksjonelle k
 Lag en oversikt over gjøremålene til de enkelte utviklerne undervis i prosessen.
 I dette prosjektet skal dere samarbeide i Github. Den av dere som er eldst oppretter et REPO for prosjektet (navn på repo: CRM_GR#), og inviterer de andre medlemmene inn i dette REPOet.
 
-@@## SPESIFIKASJONER@@
+## SPESIFIKASJONER
 ---
 
 Dere utvikler produktet i PHP på deres lokale XAMPP-server.
