@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:35
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:25:09
+ * @Last Modified time: 2026-03-17 10:16:03
  */
 
 
@@ -49,8 +49,8 @@ include '../connect.php';
         <label for="e-post">E-post</label> <br>
         <input type="email" name="epost" id="epost" required> <br><br>
 
-        <label for="kunde_id">kunde_id</label> <br>
-        <input type="text" name="kunde_id" id="kunde_id" readonly> <br><br>
+        <!-- <label for="kunde_id">kunde_id</label> <br>
+        <input type="text" name="kunde_id" id="kunde_id" readonly> <br><br> -->
 
         <input type="submit" name="ny_kontaktperson" id="ny_kontaktperson" value="Registrer"> <!-- submiter til ny_bekreft_kontaktperson.php -->
 

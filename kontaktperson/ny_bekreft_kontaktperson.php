@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:24:46
+ * @Last Modified time: 2026-03-17 10:17:25
  */
 
 
@@ -18,7 +18,7 @@ if(isset($_GET['ny_kontaktperson']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) /
     $stilling = $_GET['stilling'];
     $telefonnummer = $_GET['telefonnummer'];
     $epost = $_GET['epost'];
-    $kunde_id = $_GET['kunde_id'];
+    // $kunde_id = $_GET['kunde_id'];
 
     // Ser om kontakt_id finnes fra før
     $sql = "SELECT * FROM kontaktperson WHERE kontakt_id = :kontakt_id";
@@ -33,11 +33,11 @@ if(isset($_GET['ny_kontaktperson']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) /
     if (!$kontakt)
         {
 
-        $sql = "INSERT INTO kontaktperson (kontakt_id, navn, etternavn, stilling, telefonnummer, epost)
-                VALUES (:kontakt_id, :navn, :etternavn, :stilling, :telefonnummer, :epost)"; // SQL-kode for å sette inn en ny kontakt i tabellen "kontaktperson" med verdiene som er skrevet inn i formen
+        $sql = "INSERT INTO kontaktperson (navn, etternavn, stilling, telefonnummer, epost)
+                VALUES (:navn, :etternavn, :stilling, :telefonnummer, :epost)"; // SQL-kode for å sette inn en ny kontakt i tabellen "kontaktperson" med verdiene som er skrevet inn i formen
 
         $stmt = $pdo->prepare($sql); // Forbereder SQL-koden for kjøring
-        $stmt->bindParam(":kontakt_id",$kontakt_id);
+        // $stmt->bindParam(":kontakt_id",$kontakt_id);
         $stmt->bindParam(":navn",$navn);
         $stmt->bindParam(":etternavn",$etternavn);
         $stmt->bindParam(":stilling",$stilling);
