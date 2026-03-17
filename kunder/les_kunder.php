@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-13 13:35:14
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:38:56
+ * @Last Modified time: 2026-03-13 13:42:28
  */
 
 // Inkluderer database-tilkoblingsfilen for å koble til databasen
@@ -43,7 +43,7 @@ foreach($CRM_GR4 as $kunder)
 <body>
 
     <!-- Inkluderer meny-filen for navigasjon -->
-    <?php include 'menu.php'?>
+    <?php include '../meny.php'?>
 
     <!-- Header-seksjon med beskrivelse av siden -->
     <header>
