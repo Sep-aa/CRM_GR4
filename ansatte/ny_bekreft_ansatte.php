@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:16:11
+ * @Last Modified time: 2026-03-17 10:05:24
  */
 
 
@@ -27,7 +27,7 @@ if(isset($_GET['ny_ansatte']) AND ($_SERVER['REQUEST_METHOD'] == 'GET')) // Sjek
 
     $ansatt = $stmt->fetch(PDO::FETCH_ASSOC); // Henter ut en ansatt som har samme ansatt_id som den som er skrevet inn i formen, og legger det i $ansatt som en assosiativ array
 
-    print_r($ansatt);
+    // print_r($ansatt);
 
     if (!$ansatt)
         {

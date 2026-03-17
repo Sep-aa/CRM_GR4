@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:35
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-17 09:33:41
+ * @Last Modified time: 2026-03-17 10:05:15
  */
 
 
@@ -17,7 +17,7 @@ $stmt->execute(); //Kjører SQL-koden og legger resultatet i $stmt
 
 $ansatte = $stmt->fetchAll(PDO::FETCH_ASSOC); //Henter ut alle rader fra $stmt og legger det i $ansatte som en assosiativ array
 
-print_r($ansatte);
+// print_r($ansatte);
 ?>
 
 <!DOCTYPE html>

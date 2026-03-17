@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-17 09:33:48
+ * @Last Modified time: 2026-03-17 10:05:33
  */
 
 
@@ -36,7 +36,7 @@ else
     $stmt = 0;
     
     }    
-    print_r($ansatt);
+    // print_r($ansatt);
 ?>
 
 <!DOCTYPE html>
