@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 12:52:46
+ * @Last Modified time: 2026-03-17 08:38:23
  */
 
 
@@ -40,7 +40,7 @@ else
     <?php include '../meny.php'; ?>
 
     <header>
-        <p>SLETT kontakt</p>
+        <p>SLETT KONTAKT</p>
     </header>
     
     <main>

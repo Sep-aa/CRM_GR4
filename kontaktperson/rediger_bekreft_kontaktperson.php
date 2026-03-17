@@ -3,7 +3,7 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:36
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:27:23
+ * @Last Modified time: 2026-03-17 08:42:12
  */
 
 
@@ -53,7 +53,7 @@ else
     <?php include '../meny.php'; ?>
 
     <header>
-        <p>REDIGER kontaktperson</p>
+        <p>REDIGER KONTAKTPERSON</p>
     </header>
     
     <main>

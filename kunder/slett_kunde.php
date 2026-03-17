@@ -3,11 +3,11 @@
  * @Author: Sep-aa
  * @Date:   2026-03-13 13:35:14
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-13 13:40:08
+ * @Last Modified time: 2026-03-17 08:37:23
  */
 
 // Inkluderer database-tilkoblingsfilen
-include 'connect.php';
+include '../connect.php';
 
 // Sjekker om kunde_id er sendt via GET
 if(isset($_GET['kunde_id']) AND ($_SERVER['REQUEST_METHOD'] == 'GET'))
@@ -31,11 +31,12 @@ if(isset($_GET['kunde_id']) AND ($_SERVER['REQUEST_METHOD'] == 'GET'))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Slett kunde</title>
 </head>
 <body>
     <!-- Inkluderer meny-filen -->
-    <?php include 'menu.php'; ?>
+    <?php include '../menu.php'; ?>
 
     <!-- Header-seksjon -->
     <header>
@@ -44,7 +45,7 @@ if(isset($_GET['kunde_id']) AND ($_SERVER['REQUEST_METHOD'] == 'GET'))
 
     <!-- Hovedinnhold med skjema for bekreftelse av sletting -->
     <main>
-        <form action="kunder_slett_bekreft.php" method="get">
+        <form action="slett_bekreft_kunde.php" method="get">
 
         <label for="kunde_id">Kunde ID</label> <br>
         <input type="text" name="kunde_id" id="kunde_id" value="<?php echo htmlspecialchars($kunde['kunde_id']); ?>" readonly required> <br><br>
