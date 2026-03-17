@@ -1,4 +1,4 @@
-$${\color{red}UV-gruppeoppgave: \ CRM-system \ (CRUD) ☹}$$ 
+$${\color{white}UV-gruppeoppgave: \ CRM-system \ (CRUD)}$$ 
 ---
 ✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪✪
 Et CRM-system (Customer Relationship Management) er en programvareløsning som hjelper bedrifter med å administrere og samhandle med kunder og potensielle kunder på en mer effektiv måte.
