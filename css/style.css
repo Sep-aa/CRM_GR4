@@ -1,61 +1,39 @@
-body{
-    font-family: arial;
+:root {
+    --color-primary: rgb(255, 192, 203);  /* Light Pink */
+    --color-secondary: rgb(255, 255, 255); /* White */
+    --color-nav: rgb(255, 105, 180);      /* Hot Pink */
+    --color-green: rgb(121, 202, 121);     /* Soft Green for accents */
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cute font */
     font-size: 16px;
     color: black;
     margin: auto;
     margin-top: 15px;
-    width: 80%;    
-    
+    width: 80%;
+    background-color: var(--color-secondary); /* Light background */
+    background-image: url('../kitty.jpg'); /* Replace with your actual URL */
+    background-size: cover; /* Cover entire background */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cute font */
+    font-size: 16px;
+    color: black;
+    margin: auto;
+    margin-top: 15px;
+    width: 80%;
+    background-color: var(--color-secondary); /* Light background */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
- 
 main {
-    background-color: lightgray;
+    background-color: var(--color-green); /* Soft green background */
     margin-left: 50px;
     margin-right: 50px;
     padding: 10px;
+    border-radius: 10px; /* Rounded edges for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-
-label {
-    margin-left: 20px;
-}
-
-input {
-    font-size: 16px;
-}
-
-input[type=text] {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
-input[type=email] {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }  
-
-input[type=url] {
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-
-select {
-    font-size: 16px;
-    width: 60%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
 
 input[type=submit] {
     font-size: 14px;
@@ -63,46 +41,16 @@ input[type=submit] {
     padding: 6px;
     margin-left: 0%;
     box-sizing: border-box;
-    background-color: lightgreen;
-  }  
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+    background-color: var(--color-nav); /* Hot pink for the submit button */
+    color: var(--color-secondary); /* White text */
+    border: none; /* No border for a clean look */
+    border-radius: 5px; /* Rounded corners */
 }
-
-table a {
-    text-align: left;
-    display: block;
-    text-decoration: none;
-    font-size: 12px;
-    font-family: arial;
-    color: black;
-    padding: 10px;
-    background-color: lightgreen;
-    border: 1px solid black;
-}
-   
-th, td {
-    border: 1px solid black;
-    text-align:left;
-    padding: 4px;
-    min-width: 75px;  
-}
-
-tr:nth-child(even) {
-    background-color: lightgrey;
-}
-
 
 nav {
-    width:100%;
+    width: 100%;
     height: 110px;
-    background-color: lightblue;
-}
-
-ul {
-    margin-left: 50px;
+    background-color: var(--color-nav); /* Hot pink background for nav */
 }
 
 ul li {
@@ -112,23 +60,12 @@ ul li {
     display: inline-block;
     line-height: 100px;
     border: 1px solid black;
-    
-}
-
-
-ul li a {
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: arial;
-    color: black;
-    padding: 0 20px;
+    border-radius: 5px; /* Rounded edges */
 }
 
 ul li a:hover {
     color: white;
-    background-color: black;
+    background-color: rgb(255, 0, 128); /* Darker pink on hover */
 }
 
 p {
@@ -136,27 +73,11 @@ p {
     margin-bottom: 20px;
     margin-left: 50px;
     margin-right: 50px;
-    color:black;
-    background-color: lightgray;
+    color: black;
+    background-color: var(--color-primary); /* Light pink background for paragraphs */
     font-size: 20px;
     padding: 20px;
-}
-
-#slett {
-    background-color: lightcoral;
-
-}
-
-#std_link {
-    text-align: left;
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: arial;
-    color: blue;
-    padding: 10px;
-    background-color: lightgray;
-    border: none;
+    border-radius: 5px; /* Softening the edges */
 }
 
 img {
@@ -165,5 +86,5 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
+    filter: drop-shadow(0 4px 10px rgba(255, 0, 128, 0.5)); /* Shadows under images */
 }
