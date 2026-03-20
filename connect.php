@@ -3,17 +3,17 @@
  * @Author: Sep-aa
  * @Date:   2026-03-03 10:19:35
  * @Last Modified by:   Sep-aa
- * @Last Modified time: 2026-03-06 13:18:41
+ * @Last Modified time: 2026-03-20 13:42:06
  */
 
 
 // Dette fila kobler til rett database
 
 //Parametere for tilkobling
-$host = "localhost";
-$brukernavn = "root";
-$passord = "";
-$database = "crm_gr4";
+$host = "localhost:3306";
+$brukernavn = "db_im24seb18061";
+$passord = "%VZF1%v3fpkjjsx8";
+$database = "db_im24seb18061";
 
 // Sett opp forbindelsen med try ... catch
 try
