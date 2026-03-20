@@ -63,6 +63,8 @@ $kunde = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <th>Adresse</th>
                     <th>Postnummer</th>
                     <th>By</th>
+                    <th>Rediger</th>
+                    <th>Slett</th>
                 </tr>
             </thead>
             <tbody>
