@@ -1,9 +1,13 @@
-<!-- 
-  @Author: Sep-aa
-  @Date:   2026-03-20 13:37:01
-  @Last Modified by:   Sep-aa
-  @Last Modified time: 2026-03-20 16:08:21
--->
+<?php
+
+//   @Author: Sep-aa
+//   @Date:   2026-03-20 13:37:01
+//   @Last Modified by:   Sep-aa
+//   @Last Modified time: 2026-03-20 20:48:38
+
+include 'connect.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,16 +22,7 @@
     </header>
 
     <main>
-        <nav>
-            <ul>
-                <li><a href="kunder/les_kunde.php">Les kunde</a></li>
-                <li><a href="kunder/ny_kunde.php">Legg til kunde</a></li>
-                <li><a href="ansatte/les_ansatte.php">Les ansatte</a></li>
-                <li><a href="ansatte/ny_ansatt.php">Legg til ansatt</a></li>
-                <li><a href="kontaktperson/les_kontaktperson.php">Les kontaktpersoner</a></li>
-                <li><a href="kontaktperson/ny_kontaktperson.php">Legg til kontaktperson</a></li>
-            </ul>
-        </nav>
+        <?php include 'meny2.php'?>
     </main>
 
     <footer>
